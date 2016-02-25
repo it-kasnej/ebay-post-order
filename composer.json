@@ -1,0 +1,24 @@
+{
+    "name": "kasnej/ebay-post-order",
+    "description": "Ebay RestFull API client",
+    "require": {
+        "php": ">=5.3.3",
+        "lib-curl": "*"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "4.*"
+    },
+    "autoload": {
+        "psr-0": {
+            "kasnej\\ebay-post-order": "src/"
+        }
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Nejib Ksaier",
+            "email": "kasnej@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev"
+}

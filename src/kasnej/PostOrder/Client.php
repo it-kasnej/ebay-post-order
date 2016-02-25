@@ -55,7 +55,7 @@ class Client
      * @return array
      * @throws ServerException
      */
-    public function getContactId($caseId)
+    public function getCase($caseId)
     {
 
         return $response = $this->send(HttpClient::GET, sprintf('casemanagement/%s', $caseId)));

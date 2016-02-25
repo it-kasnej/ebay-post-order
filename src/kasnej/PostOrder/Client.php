@@ -57,8 +57,8 @@ class Client
      */
     public function getContactId($caseId)
     {
-        dump(sprintf('casemanagement/%s', $caseId));
-        dump($this->send(HttpClient::GET, sprintf('casemanagement/%s', $caseId)));
+
+        return $response = $this->send(HttpClient::GET, sprintf('casemanagement/%s', $caseId)));
     }
 
 
@@ -69,7 +69,7 @@ class Client
      * @return array
      * @throws ServerException
      */
-    protected function send($method = 'GET', $uri)
+    protected function send($method = 'GET', $uri, array $body = array())
     {
         $headers = array(
             'Authorization: TOKEN '.$this->authorization.'',
@@ -78,13 +78,13 @@ class Client
             'Accept: application/json'
         );
         $uri = $this->baseUrl.$uri;
- dump($uri);
+
         try {
-            $responseJson = $this->client->send($method, $uri, $headers);
+            $responseJson = $this->client->send($method, $uri, $headers, $body);
         } catch (\Exception $e) {
             throw new ServerException($e->getMessage());
         }
-dump($responseJson);
+
         $responseArray = json_decode($responseJson, true);
 
         return $responseArray;

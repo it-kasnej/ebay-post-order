@@ -16,5 +16,5 @@ interface HttpClient
 	 * @param array $body
 	 * @return string
 	 */
-	public function send($method, $uri, array $headers);
+	public function send($method, $uri, array $headers, array $body);
 }

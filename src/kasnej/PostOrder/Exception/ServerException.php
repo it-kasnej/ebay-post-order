@@ -1,6 +1,6 @@
 <?php
 
-namespace Snowcap\Emarsys\Exception;
+namespace kasnej\PostOrder\Exception;
 
 
 class ServerException extends \Exception
